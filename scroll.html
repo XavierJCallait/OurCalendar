@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll-Based Movement</title>
+    <style>
+        body {
+            margin: 0;
+            height: 200vh; /* Makes the page scrollable */
+            background-color: black;
+            font-family: Arial, sans-serif;
+        }
+
+        .moving-object {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: red;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%);
+            transition: transform 0.3s ease-out;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="moving-object"></div>
+
+    <script>
+        window.addEventListener("scroll", () => {
+            let scrollY = window.scrollY; // Get current scroll position
+            let object = document.querySelector(".moving-object");
+
+            // Move the object to the right based on scroll position
+            object.style.transform = `translate(${scrollY}px, -50%)`;
+        });
+    </script>
+
+</body>
+</html>
