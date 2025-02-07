@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacked Path Layout</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f5f5f5;
+        }
+        .section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid black; /* For visualization */
+            position: relative;
+            width: 1200px;
+            height: 500px;
+        }
+
+        .path-sides {
+            position: absolute;
+            top: 100px;
+            bottom: 100px;
+            width: 20px;
+            background: gold;
+        }
+        .right .path-sides {
+            left: calc(100% - 10px);
+        }
+        .left .path-sides {
+            right: calc(100% - 10px);
+        }
+
+        .path-across-bottom {
+            position: absolute;
+            bottom: 0px;
+            left: 100px;
+            right: 100px;
+            height: 10px;
+            background: gold;
+        }
+        .path-across-top {
+            position: absolute;
+            top: 0px;
+            left: 100px;
+            right: 100px;
+            height: 9px;
+            background: gold;
+        }
+
+        .path-corner-tl {
+            position: absolute;
+            top: -11px;
+            left: -10px;
+            width: 200px;
+            height: 200px;
+            border: 20px solid gold;
+            border-radius: 50%;
+            clip-path: inset(0 50% 50% 0);
+        }
+        .path-corner-bl {
+            position: absolute;
+            bottom: -11px;
+            left: -10px;
+            width: 200px;
+            height: 200px;
+            border: 20px solid gold;
+            border-radius: 50%;
+            clip-path: inset(50% 50% 0 0);
+        }
+        .path-corner-br {
+            position: absolute;
+            bottom: -11px;
+            right: -10px;
+            width: 200px;
+            height: 200px;
+            border: 20px solid gold;
+            border-radius: 50%;
+            clip-path: inset(50% 0 0 50%);
+        }
+        .path-corner-tr {
+            position: absolute;
+            top: -11px;
+            right: -10px;
+            width: 200px;
+            height: 200px;
+            border: 20px solid gold;
+            border-radius: 50%;
+            clip-path: inset(0 0 50% 50%);
+        }
+
+        .circle {
+            position: absolute;
+            top: 50%;
+            width: 100px;
+            height: 100px;
+            background: gold;
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+        .left .circle {
+            left: -50px;
+        }
+        .right .circle {
+            right: -50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="section left">
+        <div class="path-sides"></div>
+        <div class="path-across-bottom"></div>
+        <div class="path-across-top"></div>
+        <div class="path-corner-tl"></div>
+        <div class="path-corner-bl"></div>
+        <div class="circle"></div>
+    </div>
+    <div class="section right">
+        <div class="path-sides"></div>
+        <div class="path-across-bottom"></div>
+        <div class="path-across-top"></div>
+        <div class="path-corner-tr"></div>
+        <div class="path-corner-br"></div>
+        <div class="circle"></div>
+    </div>
+    <div class="section left">
+        <div class="path-sides"></div>
+        <div class="path-across-bottom"></div>
+        <div class="path-across-top"></div>
+        <div class="path-corner-tl"></div>
+        <div class="path-corner-bl"></div>
+        <div class="circle"></div>
+    </div>
+</body>
+</html>
+
