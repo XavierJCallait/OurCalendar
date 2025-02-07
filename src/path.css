@@ -1,0 +1,212 @@
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 1200px;
+    height: 500px;
+}
+
+.path-sides {
+    position: absolute;
+    top: 100px;
+    bottom: 100px;
+    width: 20px;
+    background: gold;
+}
+.right .path-sides {
+    left: calc(100% - 10px);
+}
+.left .path-sides {
+    right: calc(100% - 10px);
+}
+
+.path-flat-bottom {
+    position: absolute;
+    top: 100px;
+    bottom: -1px;
+    width: 20px;
+    background: gold;
+}
+.right .path-flat-bottom {
+    left: calc(100% - 10px);
+}
+.left .path-flat-bottom {
+    right: calc(100% - 10px);
+}
+
+.path-flat-top {
+    position: absolute;
+    top: -1px;
+    bottom: 100px;
+    width: 20px;
+    background: gold;
+}
+.right .path-flat-top {
+    left: calc(100% - 10px);
+}
+.left .path-flat-top {
+    right: calc(100% - 10px);
+}
+
+.path-across-bottom {
+    position: absolute;
+    bottom: 0px;
+    left: 100px;
+    right: 100px;
+    height: 10px;
+    background: gold;
+}
+.path-across-top {
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    right: 100px;
+    height: 9px;
+    background: gold;
+}
+
+.path-across-half-top {
+    position: absolute;
+    top: 0px;
+    height: 9px;
+    background: gold;
+}
+.left .path-across-half-top {
+    left: 100px;
+    right: 700px;
+}
+.right .path-across-half-top {
+    left: 700px;
+    right: 100px;
+}
+
+.path-across-half-bottom {
+    position: absolute;
+    bottom: 0px;
+    height: 9px;
+    background: gold;
+}
+.left .path-across-half-bottom {
+    left: 100px;
+    right: 700px;
+}
+.right .path-across-half-bottom {
+    left: 700px;
+    right: 100px;
+}
+
+.path-corner-tl {
+    position: absolute;
+    top: -11px;
+    left: -10px;
+    width: 200px;
+    height: 200px;
+    border: 20px solid gold;
+    border-radius: 50%;
+    clip-path: inset(0 50% 50% 0);
+}
+.path-corner-bl {
+    position: absolute;
+    bottom: -11px;
+    left: -10px;
+    width: 200px;
+    height: 200px;
+    border: 20px solid gold;
+    border-radius: 50%;
+    clip-path: inset(50% 50% 0 0);
+}
+.path-corner-br {
+    position: absolute;
+    bottom: -11px;
+    right: -10px;
+    width: 200px;
+    height: 200px;
+    border: 20px solid gold;
+    border-radius: 50%;
+    clip-path: inset(50% 0 0 50%);
+}
+.path-corner-tr {
+    position: absolute;
+    top: -11px;
+    right: -10px;
+    width: 200px;
+    height: 200px;
+    border: 20px solid gold;
+    border-radius: 50%;
+    clip-path: inset(0 0 50% 50%);
+}
+
+.circle {
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    background: gold;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+.left .circle {
+    left: -50px;
+}
+.right .circle {
+    right: -50px;
+}
+
+.circle-blue {
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    background: #89CFF0;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+.left .circle-blue {
+    left: -50px;
+}
+.right .circle-blue {
+    right: -50px;
+}
+
+.circle-mid-bottom {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: #FD2B7B;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+.circle-mid-top {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: gold;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.path-corner-mid-br {
+    position: absolute;
+    bottom: -11px;
+    right: 600px;
+    width: 200px;
+    height: 200px;
+    border: 20px solid gold;
+    border-radius: 50%;
+    clip-path: inset(50% 0 0 50%);
+}
+.path-corner-mid-tl {
+    position: absolute;
+    top: -11px;
+    left: 600px;
+    width: 200px;
+    height: 200px;
+    border: 20px solid gold;
+    border-radius: 50%;
+    clip-path: inset(0 50% 50% 0);
+}
