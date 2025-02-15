@@ -1,7 +1,7 @@
 .section {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     position: relative;
     width: 1200px;
     height: 500px;
@@ -209,4 +209,38 @@
     border: 20px solid gold;
     border-radius: 50%;
     clip-path: inset(0 50% 50% 0);
+}
+
+.content-top {
+    background-color: #F8F3DE;
+    padding: 20px;
+    width: 50%;
+    height: 40%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+    bottom: 10%;
+}
+
+.content {
+    background-color: #F8F3DE;
+    padding: 20px;
+    width: 50%;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+.content-img {
+    width: 48%; /* Makes the image responsive inside .content */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+    display: block; /* Ensures no extra space below */
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between; /* Distribute images evenly */
+    margin-bottom: 20px; /* Adds space between images and text */
 }
