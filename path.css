@@ -244,3 +244,15 @@
     justify-content: space-between; /* Distribute images evenly */
     margin-bottom: 20px; /* Adds space between images and text */
 }
+
+.content-bottom {
+    background-color: #F8F3DE;
+    padding: 20px;
+    width: 50%;
+    height: 40%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+    top: 10%;
+}
