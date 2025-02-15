@@ -233,7 +233,7 @@
     text-align: left;
 }
 .content-img {
-    width: 48%; /* Makes the image responsive inside .content */
+    width: 45%; /* Makes the image responsive inside .content */
     height: auto; /* Maintains aspect ratio */
     border-radius: 8px; /* Optional: Adds rounded corners */
     display: block; /* Ensures no extra space below */
